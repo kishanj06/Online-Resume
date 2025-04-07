@@ -105,5 +105,28 @@
         </p>
     </div>
 
+    <!--Salary Calculator Section-->
+    <div style = "margin-top: 20px;">
+        <h2>Salary Calculator</h2>
+        <form>
+            <label for = "hourlyWage">Hourly Wage ($):</label><br>
+            <input type = "text" id="hourlyWage" name="hourlyWage"><br><br>
+            <label for = "hoursPerWeek">Hours Per Week:</label><br>
+            <input type = "text" id="hoursPerWeek" name="hoursPerWeek"><br><br>
+            <button type = "button" onclick="calculateSalary()">Calculate Annual Salary</button>
+        </form>
+
+        <p id="salaryOutput"></p>
+    </div>
+
+    <script type="text/javascript">
+        function calculateSalary(){
+            var hourlyWage = parseFloat(document.getElementById("hourlyWage").value);
+            var hoursPerWeek = parseFloat(document.getElementById("hoursPerWeek").value);
+            var annualSalary = hourlyWage * hoursPerWeek * 52;
+            document.getElementById("salaryOutput").innerHTML = "Your estimated annual salary is $" + annualSalary.toFixed(2);
+        }
+    </script>
+
 </body>
 </html>

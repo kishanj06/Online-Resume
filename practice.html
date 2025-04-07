@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>JavaScript Practice</title>
+    </head>
+    <body>
+
+    <script type ="text/javascript">
+        var x = "JavaScript is fun.";
+        document.write(x + x + x + x + x);
+    </script>
+
+    <br><br>
+
+    <button onclick = "printMessage()">Click Me</button>
+    <p id="change">this will change</p>
+
+    <script type = "text/javascript">
+        function printMessage(){
+            var x = "JavaScript is fun.";
+            document.getElementById("change").innerHTML = x + x + x + x + x;
+        }
+    </script>
+
+    </body>
+</html>
